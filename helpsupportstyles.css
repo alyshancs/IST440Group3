@@ -1,0 +1,63 @@
+body{
+        background-color: #0066cb;
+}
+img{
+	max-width: 200px;
+	height: auto;
+	margin-bottom: -20px;
+}
+#form{
+        font: 500 1rem 'Calibri Light';
+        color: #fff;
+	background-color: #0066cb;
+        width: 65%;
+	margin: 10px auto;
+	padding-top: 0px;
+   	padding-right: 25px;
+	padding-left: 25px;
+}
+#faq{
+	font: 500 1rem 'Calibri';
+	color: #ffffff;
+}
+#answer{
+	font: 500 1rem 'Calibri Light';
+	color: #a5cfd6;
+}
+#header{
+        font-size: 40px;
+        font: 'Calibri Light';
+	color: #4aacc5;
+	margin-top: -20px;
+}
+#line{
+	margin-top: -30px;
+}
+#btn{
+        font-size: 14px;
+        text-shadow: 1px 1px 1px #4295a6;
+        margin: 20px 0px 10px 0px;
+        height: 40px;
+        width: 100%;
+        color: #fff;
+        background-color: #4aacc5;
+        outline: none;
+        border: none;
+        border-radius: 50px;
+        box-shadow: 3px 3px 3px #05478f;
+}
+#btn:hover{
+        background-color: #4295a6;
+}
+
+#btn:active{
+        transform: scale(0.9);
+}
+
+@media screen and (max-width: 700px){
+        #form {
+                width: 65%;
+                padding: 20px;
+		margin-top: -50px;
+        }
+}

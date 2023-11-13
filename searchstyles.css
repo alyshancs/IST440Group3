@@ -1,0 +1,90 @@
+*{
+    background-color: #0066cb;
+}
+img{
+    max-width: 200px;
+    height: auto;
+    margin-bottom: -20px;
+}
+
+#line{
+        margin-top: -30px;
+}
+
+#form{
+    font: 500 1rem 'Calibri Light';
+    color: #fff;
+    background-color: #0066cb;
+    width: 45%;
+    margin: 10px auto;
+    padding-top: 0px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+input{
+    
+    background-color: white;
+    margin: 10px;
+    width: 45%;
+    height: 35px;
+    outline: none;
+    border: none;    
+}
+
+button{
+        font-size: 14px;
+        text-shadow: 1px 1px 1px #4295a6;
+        margin: 20px 0px 10px 0px;
+        height: 40px;
+        width: 75%;
+        color: #fff;
+        background-color: #c05045;
+        outline: none;
+        border: none;
+        border-radius: 50px;
+        box-shadow: 3px 3px 3px #05478f;
+}
+
+button:hover{
+        background-color: #9c1011;
+}
+
+button:active{
+        transform: scale(0.9);
+}
+
+.buttonholder{
+	text-align: center;
+}
+
+.inputholder1{
+        text-align: center;
+}
+
+.inputholder2{
+        text-align: left;
+	margin-left: 11px;
+}
+
+#header{
+        font-size: 40px;
+        font: 'Calibri Light';
+        color: #4aacc5;
+        margin-top: -20px;
+}
+
+table{
+	color: #ffffff;
+}
+
+.tableholder{
+	text-align: center;
+}
+
+@media screen and (max-width: 700px){
+        #form {
+                width: 65%;
+                padding: 20px;
+                margin-top: -50px;
+        }
+    }

@@ -1,0 +1,103 @@
+body{
+    background-color: #0066cb;
+}
+
+#logoutlink{
+	text-align: right;
+	font: 'Calibri Light';
+}
+
+#form{
+    font: 500 1rem 'Calibri Light';
+    color: #fff;
+    background-color: #0066cb;
+    width: 45%;
+    margin: 10px auto;
+    padding: 50px;
+}
+
+#line{
+	width: 75%;
+}
+
+.buttonholder{
+	text-align: center;
+}
+
+#buttonone{
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #4295a6;
+    margin: 20px 0px 10px 0px;
+    height: 60px;
+    width: 75%;
+    color: #fff;
+    background-color: #c05045;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px #05478f;
+}
+
+#buttonone:hover{
+        background-color: #9c1011;
+}
+
+#buttonone:active{
+        transform: scale(0.9);
+}
+
+#buttontwo{
+    font-size: 20px;
+    text-shadow: 1px 1px 1px #4295a6;
+    margin: 20px 0px 10px 0px;
+    height: 50px;
+    width: 75%;
+    color: #fff;
+    background-color: #4aacc5;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px #05478f;
+}
+
+#buttontwo:hover{
+        background-color: #4295a6;
+}
+
+#buttontwo:active{
+        transform: scale(0.9);
+}
+
+a:link {
+  font-size: 25px;
+  color: #ffffff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #3e9ece;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #c10300;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #3e9ece;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 700px){
+        #form {
+                width: 65%;
+                padding: 20px;
+                margin-top: -50px;
+        }
+    }
