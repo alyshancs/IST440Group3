@@ -1,7 +1,9 @@
 <?php
-session_start();
 include "..inc/dbinfo.inc";
-
+session_start(); 
+if(!isset($_SESSION["user"])){ 
+    header("Location:login.php"); 
+}
         //this bit is the sql insert
 
         if(isset($_POST['submitCombinedLine'])){

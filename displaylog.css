@@ -1,0 +1,65 @@
+*{
+    background-color: #0066cb;
+}
+img{
+    max-width: 200px;
+    height: auto;
+    margin-bottom: -20px;
+}
+
+h1{
+	font: 500 1rem 'Calibri';
+	font-weight: bold;
+	font-size: 30px;
+    background-color: #6CBEFA;
+    margin: 1px;
+}
+.encounter{
+	font: 500 1rem 'Calibri';
+	font-weight: bold;
+	color: #d3d3d3;
+}
+
+table{
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    width: 100%;
+}
+
+tr{
+    	text-align: center;
+	background-color: #ffffff;
+	border-color: black;
+	border: 2px;
+}
+
+th{
+	background-color: #d3d3d3;
+}
+
+td{
+	background-color: #ffffff;
+}
+
+button{
+        font-size: 14px;
+        text-shadow: 1px 1px 1px #4295a6;
+        margin: 20px 0px 10px 0px;
+        height: 40px;
+        width: 25%;
+        color: #fff;
+        background-color: #4aacc5;
+        outline: none;
+        border: none;
+        border-radius: 50px;
+        box-shadow: 3px 3px 3px #05478f;
+}
+
+button:hover{
+        background-color: #4295a6;
+}
+
+button:active{
+        transform: scale(0.9);
+}

@@ -1,4 +1,9 @@
-<?php include "../inc/dbinfo.inc"; ?>
+<?php include "../inc/dbinfo.inc";
+session_start(); 
+if(!isset($_SESSION["user"])){ 
+    header("Location:login.php"); 
+}
+?>
 <!DOCTYPE html>
 
 <html>
@@ -21,7 +26,11 @@
    		 <input type="text" name="last_name" placeholder="Last Name" required><br>
 	</div>
 	<div class="inputholder2">
-   		 <input type="number" name="date_of_birth" placeholder="Date of Birth" required><br> 
+		<!-- Old date of birth input field -->
+   		<!-- <input type="number" name="date_of_birth" placeholder="Date of Birth" required><br> -->
+
+		<!-- New date input type -->
+		<input type ="date" name="date_of_birth" required><br>
 	</div>
 	<div class="buttonholder">
    		 <button type="submit" name="submit-search">Search for Patient</button>

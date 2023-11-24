@@ -1,36 +1,47 @@
 <?php
-session_start();
 include "../inc/dbinfo.inc";
+session_start(); 
+if(!isset($_SESSION["user"])){ 
+    header("Location:login.php"); 
+}
 ?>
 
 <!DOCTYPE html>
 <html>
-    <head></head>
+<head>
+<link rel="stylesheet" type="text/css" href="displaylog.css">
+<div style="text-align: left;" id="img">
+<a href="index.php">
+    <img src="EMESIS Logo.jpg" alt="EMESIS logo">
+</a>
+</div>
 
+</head>
 
+<div class="encounter">
     <?php
     $simplelogEncID = $_SESSION["sessionEncId"];
-    echo "<h2>The Encounter id is ".$simplelogEncID."</h2>";
+    echo "<h2>The Encounter ID is ".$simplelogEncID."</h2>";
 
-    $sql_encounterLog = "SELECT * FROM activitylog WHERE id_emsencounter ='$simplelogEncID'";
+    $sql_encounterLog = "SELECT * FROM activitylog WHERE id_emsencounter ='$simplelogEncID'ORDER BY date_time";
     $encounterResult = mysqli_query($conn, $sql_encounterLog);
     $dataencounterResults = array();
         if(mysqli_num_rows($encounterResult)>0){
             While($row_encounterResult =mysqli_fetch_assoc($encounterResult)){
                 $dataencounterResults[] = $row_encounterResult;
             }
-        
     ?>
+</div>
     <h1> Encounter Record </h1>
     <table>
         <tr>
-            <td>Date</td>
-            <td>Notes</td>
-            <td>Systolic BP</td>
-            <td>Diastolic BP</td>
-            <td>Pulse</td>
-            <td>sp02</td>
-            <td>Respiratory Rate</td>
+            <th>Date</th>
+            <th>Notes</th>
+            <th>Systolic BP</th>
+            <th>Diastolic BP</th>
+            <th>Pulse</th>
+            <th>sp02</th>
+            <th>Respiratory Rate</th>
         </tr>
         <?php
         foreach($dataencounterResults as $dataencounterResult){

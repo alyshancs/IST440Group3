@@ -1,10 +1,11 @@
-*{
+body{
     background-color: #0066cb;
 }
+
 img{
-    max-width: 200px;
-    height: auto;
-    margin-bottom: -20px;
+	max-width: 200px;
+	height: auto;
+	margin-bottom: -20px;
 }
 
 #line{
@@ -15,17 +16,25 @@ img{
     font: 500 1rem 'Calibri Light';
     color: #fff;
     background-color: #0066cb;
-    width: 45%;
+    width: 55%;
     margin: 10px auto;
     padding-top: 0px;
     padding-right: 25px;
     padding-left: 25px;
 }
+
+#header{
+        font-size: 40px;
+        font: 'Calibri Light';
+        color: #4aacc5;
+        margin-top: -50px;
+}
+
 input{
     
     background-color: white;
     margin: 10px;
-    width: 45%;
+    width: 22%;
     height: 35px;
     outline: none;
     border: none;    
@@ -38,7 +47,7 @@ button{
         height: 40px;
         width: 75%;
         color: #fff;
-        background-color: #c05045;
+        background-color: #4aacc5;
         outline: none;
         border: none;
         border-radius: 50px;
@@ -46,7 +55,7 @@ button{
 }
 
 button:hover{
-        background-color: #9c1011;
+        background-color: #4295a6;
 }
 
 button:active{
@@ -57,34 +66,9 @@ button:active{
 	text-align: center;
 }
 
-.inputholder1{
-        text-align: center;
-}
-
-.inputholder2{
-        text-align: left;
-	margin-left: 11px;
-}
-
-#header{
-        font-size: 40px;
-        font: 'Calibri Light';
-        color: #4aacc5;
-        margin-top: -50px;
-}
-
-table{
-	color: #ffffff;
-}
-
-.tableholder{
-	text-align: center;
-}
-
-@media screen and (max-width: 700px){
+@media screen and (max-widt: 700px){
         #form {
                 width: 65%;
-                padding: 20px;
-                margin-top: -50px;
+                padding: 40px;
         }
-    }
+}

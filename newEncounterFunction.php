@@ -10,9 +10,9 @@
 
     if(isset($_POST['submitNewEncounter']))
     {
-        $fname= mysqli_real_escape_string($conn,$_POST['first_name']);
-        $lname=mysqli_real_escape_string($conn,$_POST['last_name']);
-        $dob =mysqli_real_escape_string($conn,$_POST['ptDOB']);
+        $fname=$_POST['first_name'];
+        $lname=$_POST['last_name'];
+        $dob =$_POST['ptDOB'];
 	$encDateTime =$_POST['encounterDateTime'];
         $locName =$_POST['locationName'];
         $locAddress =$_POST['locationAddress'];
@@ -22,13 +22,13 @@
 	//need sql to find and insert patient id for the sql below
 
 	// prepared sqli  statement
-	$newsql="INSERT INTO emsencounter (encounter_date_time,location_name,location_street_address,location_state,location_city) VALUES (?,?,?,?,?)";
+	$newsql="INSERT INTO emsencounter (encounter_date_time,location_name,location_street_address,location_state,location_city,first_name,last_name,date_of_birth) VALUES (?,?,?,?,?,?,?,?)";
 	$newstmt=mysqli_stmt_init($conn);
 	$newprepstmt=mysqli_stmt_prepare($newstmt,$newsql);
 
 	if($newprepstmt)
 		{
-		mysqli_stmt_bind_param($newstmt,"sssss",$encDateTime,$locName,$locAddress,$locState,$locCity);
+		mysqli_stmt_bind_param($newstmt,"ssssssss",$encDateTime,$locName,$locAddress,$locState,$locCity,$fname,$lname,$dob);
 		mysqli_stmt_execute($newstmt);
 
 		//retrieves the encounter id that was just created by the insert query above. This is used by activity log to insert data into activity log

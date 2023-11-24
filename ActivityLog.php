@@ -1,36 +1,45 @@
-
-
 <?php
-session_start();
-include "../inc/dbinfo.inc";
-
+include "../inc/dbinfo.inc"; 
+session_start(); 
+if(!isset($_SESSION["user"])){ 
+    header("Location:login.php"); 
+}
 ?>
 
+<!DOCTYPE html>
+ 
+<head>
+        <link rel="stylesheet" href="activitylogstyles.css">
+	<title>Activity Log</title>
 
+            <!-- hidden  input to capture the encounter id-->
+            <input type="hidden" id="hiddenEncID" name="hiddenEncID" value="$_SESSION["sessionEncId"]">
+        <a href="index.php">
+                <div style="text-align: left;" id="img">
+                 <img src="EMESIS Logo.jpg" alt="EMESIS logo">
+                </div>
+        </a>
+</head>
 
+<body>
 
-<!DOCTYPE html> 
- <head>
-        <title> Activity Log</title>
-    </head>
-
-    <body>
-        <h1> Activity Log </h1>
-       <?php echo "The encounter id is ".$_SESSION["sessionEncId"]." <br>"; ?>
+	<div class="encounter">
+        <?php 
+		echo "<h2>The Encounter ID is ".$_SESSION["sessionEncId"]."</h2>";
+	 ?>
+	</div>
 
         <!-- form to input new activity log line-->
-        <form action="insertActivityLogLine.php" method="POST" >
+        <form action="insertActivityLogLine.php" method="POST" id="form">
 
-	    <!-- hidden  input to capture the encounter id-->
-	    <input type="hidden" id="hiddenEncID" name="hiddenEncID" value="$_SESSION["sessionEncId"]">
+        <div style="text-align:center;" id="header">
+                <h1>ACTIVITY LOG</h1>
+                <hr style="text-align:center;" id="line">
+        </div>
 
             <!--Label and input field for date/time of new line-->
             <label for="lineTime"> Time:</label>
-            <input type="datetime-local" id="lineTime" name="lineTime" placeholder="Time">
-
-            <!--Label and input field for notes -->
-            <label for="lineNote"> Notes:</label>
-            <input type="text" id="lineNote" name="lineNote" placeholder="Type notes here."><br><br>
+            <input type="datetime-local" id="lineTime" name="lineTime" placeholder="Time"><br><br>
 
             <!--Label and input field for systolic BP-->
             <label for="lineSystolicBP"> Systolic BP: </label>
@@ -54,8 +63,14 @@ include "../inc/dbinfo.inc";
             <label for="lineRespiratory"> Respiratory Rate:</label>
             <input type="number" id="lineRespiratory" name="lineRespiratory" placeholder="ie: 18"> <br><br>
 
+	    <!-- Label and text area for notes -->
+	    <label for="lineNote"> Type notes into the box below:</label> <br>
+	    <textarea id="lineNote" name="lineNote" rows="10" cols="100"> </textarea>
+
+	<div class="buttonholder">
             <!-- button to update/submit new line for activity log-->
             <button type ="submit" name="submitNewLine" > Save </button>
+	</div>
 
         </form>
 

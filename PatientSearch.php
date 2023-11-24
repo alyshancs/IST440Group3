@@ -48,7 +48,7 @@ if(!isset($_SESSION["user"])){
                     }
                 }
                 ?>
-                <h1>Allergies</h1>
+                <h1 id="allergies">Allergies</h1>
                 <table>
                         <tr>
                             <th>Allergy Trigger</th>
@@ -151,10 +151,10 @@ if(!isset($_SESSION["user"])){
                 <h1>Surgical History</h1>
                 <table>
                     <tr>
-                        <td>Procedure</td>
-                        <td>Date Performed</td>
-                        <td>Success?</td>
-                        <td>Complications</td>
+                        <th>Procedure</th>
+                        <th>Date Performed</th>
+                        <th>Success?</th>
+                        <th>Complications</th>
                     </tr>
                 <?php
 

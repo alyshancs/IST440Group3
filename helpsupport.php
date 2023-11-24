@@ -12,11 +12,16 @@ if(!isset($_SESSION["user"])){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="helpsupportstyles.css">
-</head>
-<body>
+
+<a href="index.php">
         <div style="text-align:left;" id="img">
                         <img src="EMESIS Logo.jpg" alt="EMESIS logo">
         </div>
+</a>
+
+</head>
+<body>
+
         <div id="form">
 		<div style="text-align:center;" id="header">
 			<h1>HELP & SUPPORT</h1>
